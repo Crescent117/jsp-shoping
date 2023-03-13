@@ -4,7 +4,7 @@
 	Connection conn = null;	
 
 	try {
-		String url = "jdbc:mysql://localhost:3306/WebMarketDB";
+		String url = "jdbc:mysql://localhost:3306/WebMarketDB?useSSL=false";
 		String user = "root";
 		String password = "rpass";
 

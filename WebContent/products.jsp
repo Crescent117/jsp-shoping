@@ -8,6 +8,7 @@
 <title>상품 목록</title>
 </head>
 <body>
+<main>
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
@@ -27,10 +28,10 @@
 				while (rs.next()) {
 			%>
 			<div class="col-md-4">
-				<img src="c:/upload/<%=rs.getString("p_fileName")%>" style="width: 100%">
+				<img src="<%=rs.getString("p_fileName")%>" style="width: 100%">
 				<h3><%=rs.getString("p_name")%></h3>
 				<p><%=rs.getString("p_UnitPrice")%>원
-				<p><a href="/WebMarket/Bcontroller.do?id=<%=rs.getString("p_id")%>"class="btn btn-secondary" role="button">상세 정보 &raquo;></a>
+				<p><a href="./Bcontroller.po?p_id=<%=rs.getString("p_id")%>"class="btn btn-secondary" role="button">상세 정보 &raquo;></a>
 			</div>
 			<%
 				}
@@ -44,6 +45,7 @@
 		</div>
 		<hr>
 	</div>
+	</main>
 	<jsp:include page="footer.jsp" />
 </body>
 </html>
